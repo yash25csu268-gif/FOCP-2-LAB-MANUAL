@@ -1,0 +1,25 @@
+// Q21. Display a hollow rectangular frame
+// A CAD tool generates rectangular hollow frames.
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int rows, cols;
+    cout << "Enter number of rows   : "; cin >> rows;
+    cout << "Enter number of columns: "; cin >> cols;
+
+    cout << "\n--- Hollow Rectangle ---" << endl;
+
+    for (int i = 1; i <= rows; i++) {
+        for (int j = 1; j <= cols; j++) {
+            if (i == 1 || i == rows || j == 1 || j == cols)
+                cout << "*";
+            else
+                cout << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
